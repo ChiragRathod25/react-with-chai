@@ -25,9 +25,11 @@ function App() {
           <div className="w-full max-w-sm mx-auto flex justify-end mb-4">
             <ThemeBtn />
           </div>
-          <Card />
+       
 
-          <div className="w-full max-w-sm mx-auto">{/* Card  */}</div>
+          <div className="w-full max-w-sm mx-auto">
+            <Card/> 
+            </div>
         </div>
       </div>
     </ThemeContextProvider>

@@ -14,6 +14,7 @@ function AddTodo() {
     dispatch(addTodo(input));
     setInput("");
   };
+  
   return (
     <form onSubmit={addTodoHandler} className="space-x-3 mt-12">
       <input

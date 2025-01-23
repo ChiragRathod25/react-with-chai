@@ -13,11 +13,15 @@ export default function AuthLayout({ children, authentication = true }) {
     // setLoader(false);
 
     // let authValue = authStatus === true ? true : false;
-
-    if (authStatus && authStatus !== authentication) 
+    if(authentication===false){
+      console.log("Authentication is not required !")
+    }
+    else if (authentication && authStatus !== authentication) 
         navigate("/login");
-    else if (!authStatus && authStatus !== authentication) 
+    
+    else if (!authentication && authStatus !== authentication) 
         navigate("/");
+    console.log("loader changed to ",loader)
     setLoader(false);
   }, [authStatus, navigate, authentication]);
 

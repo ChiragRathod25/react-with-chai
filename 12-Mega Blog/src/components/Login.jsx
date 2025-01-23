@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { Login as authLogin } from "../store/authSlice";
+import { login as authLogin } from "../store/authSlice";
 import { Logo, Input, Button } from "./index";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import authService from "../appwrite/auth";
 import { useForm } from "react-hook-form";
 
@@ -19,11 +19,14 @@ function Login() {
       if (session) {
         const userData = await authService.getCurrentUser();
         if (userData) {
-          dispatch(authLogin(userData));
+          // console.log("Userdata",userData);          
+          dispatch(authLogin({userData}));
+ 
           navigate("/");
         }
       }
     } catch (error) {
+      console.log("Login Componenet Error:",error.message)
       setError(error.message);
     }
   };

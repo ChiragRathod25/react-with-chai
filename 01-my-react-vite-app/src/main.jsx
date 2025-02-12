@@ -66,10 +66,10 @@ createRoot(document.getElementById('root')).render(
 
     //comment: inside react our html is converted to object, as we discussed in /customeReact/customReact.js, so insted of passing a HTML, we can pass element as we discussed 
 
-    //reactElement  //1.it will not work because of function declaration of it inside React
-    //anotherElement  // 2.this will work becase we are passing an element created using defined React function
+    // reactElement  //1.it will not work because of function declaration of it inside React
+    // anotherElement  // 2.this will work becase we are passing an element created using defined React function
     
-    //comment: if another vaiaable is there that it is passed to craeteElement function parameter at the end while creation of it
+    //comment: if another variable is there that it is passed to craeteElement function parameter at the end while creation of it
     // secondElement // it will print with my name
 
 

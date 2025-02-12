@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import "./App.css";
 import { InputBox } from "./components";
 import useCurrencyInfo from "./hooks/useCurrencyInfo";
@@ -12,6 +12,7 @@ function App() {
   const [from, setFrom] = useState("usd");
   const [to, setTo] = useState("inr");
   const currencyInfo = useCurrencyInfo(from);
+ 
   const options = Object.keys(currencyInfo);
 
   const swap = () => {
